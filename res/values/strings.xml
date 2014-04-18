@@ -4,5 +4,9 @@
     <string name="app_name">Ikra</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="go_back">Go Back</string>
+    <string name="go_next">Go Next</string>
+    <string name="stop">Stop</string>
+    <string name="refresh">Refresh</string>
 
 </resources>
