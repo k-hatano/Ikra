@@ -26,13 +26,22 @@ public class FullscreenActivity extends Activity {
 		
 		WebView webView=(WebView)findViewById(R.id.webView);
 		webView.setWebViewClient(new WebViewClient());
+		
+		webView.setScrollBarStyle(WebView.SCROLLBARS_INSIDE_OVERLAY);
+		webView.setVerticalScrollbarOverlay(true);
+		
 		webView.getSettings().setJavaScriptEnabled(true);
+		
 		webView.getSettings().setSupportZoom(true);
 		webView.getSettings().setSavePassword(true);
 		webView.getSettings().setBuiltInZoomControls(true);
-		webView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
+		webView.getSettings().setLoadWithOverviewMode(true);
+		webView.getSettings().setUseWideViewPort(true);
 		
 		webView.getSettings().setUserAgentString("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36");
+		
+		webView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
+		
 		webView.loadUrl("https://www.icloud.com/");	
 	}
 	
