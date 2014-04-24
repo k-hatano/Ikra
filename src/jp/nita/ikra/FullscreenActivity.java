@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -40,7 +41,7 @@ public class FullscreenActivity extends Activity {
 		
 		webView.getSettings().setUserAgentString("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36");
 		
-		webView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
+		// webView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
 		
 		webView.loadUrl("https://www.icloud.com/");	
 	}
@@ -50,6 +51,19 @@ public class FullscreenActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_fullscreen, menu);
 		return true;
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+		WebView webView=(WebView)findViewById(R.id.webView);
+        switch (item.getItemId()) {
+        case 0:
+        	if(webView.canGoBack()) webView.goBack();
+        	return true;
+        case 1:
+        	if(webView.canGoForward()) webView.goForward();
+        	return true;
+        }
+        return false;
 	}
 
 }
