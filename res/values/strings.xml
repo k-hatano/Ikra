@@ -8,5 +8,6 @@
     <string name="go_next">Go Next</string>
     <string name="stop">Stop</string>
     <string name="refresh">Refresh</string>
+    <string name="settings">Settings</string>
 
 </resources>

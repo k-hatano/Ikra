@@ -2,4 +2,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/go_back" android:title="@string/go_back"></item>
     <item android:id="@+id/go_next" android:title="@string/go_next"></item>
+    <item android:id="@+id/settings" android:title="@string/settings"></item>
 </menu>

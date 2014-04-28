@@ -3,6 +3,7 @@ package jp.nita.ikra;
 import jp.nita.ikra.util.SystemUiHider;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -62,6 +63,11 @@ public class FullscreenActivity extends Activity {
         case 1:
         	if(webView.canGoForward()) webView.goForward();
         	return true;
+        case 2:
+        {
+        	Intent intent=new Intent(this,SettingsActivity.class);
+            startActivity(intent);
+        }
         }
         return false;
 	}
